@@ -15,16 +15,14 @@ export default function MarketingPage() {
   return (
     <main className="texan-site">
       <div className="texan-topbar">
+        <a href="tel:+15125649925">Richelle 512-564-9925</a>
         <span>Proudly serving personal injury law firms nationwide</span>
+        <a href="tel:+12819790372">Jackie 281-979-0372</a>
       </div>
 
       <nav className="texan-nav" aria-label="Primary navigation">
         <a className="texan-logo" href="#home" aria-label="Texan Core Solutions home">
-          <span className="texan-mark">TCS</span>
-          <span>
-            <b>Texan</b>
-            <small>Core Solutions</small>
-          </span>
+          <img src="/texan-assets/texan-logo-full.png" alt="Texan Core Solutions" />
         </a>
         <div className="texan-links">
           <a href="#home">Home</a>
@@ -51,6 +49,9 @@ export default function MarketingPage() {
             <a className="btn" href={DEMO_EMAIL}>Schedule a Consultation</a>
             <Link className="btn secondary" href="/login">Open Demo Portal</Link>
           </div>
+          <p className="texan-attorney-note">
+            We do our work under the supervision of a licensed attorney.
+          </p>
         </div>
         <div className="texan-hero-art" aria-label="Nationwide Texan Core Solutions support">
           <img className="texan-hero-map-img" src="/texan-assets/hero-us-map-houston-client.png" alt="United States support map with Texan Core Solutions mark over Houston skyline" />

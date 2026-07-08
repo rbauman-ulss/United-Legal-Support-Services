@@ -491,9 +491,10 @@ html.dark .feature { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(
 }
 .texan-topbar {
   min-height: 38px;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  justify-content: center;
+  gap: 18px;
   padding: 0 4vw;
   background: #061536;
   color: #fff;
@@ -501,13 +502,14 @@ html.dark .feature { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(
   font-weight: 700;
   text-transform: uppercase;
 }
+.texan-topbar a { color: #fff; white-space: nowrap; }
 .texan-topbar span { text-align: center; letter-spacing: .03em; }
 .texan-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 28px;
-  padding: 18px 4vw;
+  gap: 24px;
+  padding: 14px 4vw;
   background: rgba(255,255,255,.92);
   border-bottom: 1px solid rgba(7,22,56,.08);
   position: sticky;
@@ -517,12 +519,17 @@ html.dark .feature { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(
 .texan-logo {
   display: inline-flex;
   align-items: center;
-  gap: 14px;
   color: #071638;
-  text-transform: uppercase;
-  letter-spacing: .18em;
+  flex: 0 0 auto;
 }
 .texan-logo:hover { text-decoration: none; }
+.texan-logo img {
+  display: block;
+  width: clamp(185px, 18vw, 270px);
+  height: auto;
+  max-height: 72px;
+  object-fit: contain;
+}
 .texan-logo b { display: block; font-family: Georgia, serif; font-size: 30px; line-height: 1; }
 .texan-logo small { display: block; color: #bf7412; font-size: 10px; font-weight: 800; letter-spacing: .16em; }
 .texan-mark {
@@ -581,6 +588,13 @@ html.dark .feature { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(
   margin: 0 0 28px;
 }
 .texan-cta-row { display: flex; gap: 14px; flex-wrap: wrap; }
+.texan-attorney-note {
+  margin: 16px 0 0;
+  max-width: 560px;
+  color: #071638;
+  font-size: 14px;
+  font-weight: 700;
+}
 .texan-hero-art {
   min-width: 0;
   display: flex;
@@ -1070,6 +1084,8 @@ html.dark .feature { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(
   .view-switcher a { flex: 1 1 130px; text-align: center; }
 
   .texan-topbar {
+    grid-template-columns: 1fr;
+    gap: 6px;
     padding: 10px 5vw;
     text-align: center;
     font-size: 11px;
@@ -1081,7 +1097,8 @@ html.dark .feature { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(
     gap: 16px;
     padding: 16px 5vw;
   }
-  .texan-logo { align-self: stretch; justify-content: center; }
+  .texan-logo { align-self: flex-start; justify-content: flex-start; }
+  .texan-logo img { width: min(100%, 250px); max-height: 68px; }
   .texan-links {
     width: 100%;
     justify-content: center;
@@ -1200,9 +1217,9 @@ html.dark .feature { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(
 @media (max-width: 520px) {
   .texan-topbar span { line-height: 1.35; }
   .texan-logo {
-    gap: 10px;
-    letter-spacing: .12em;
+    letter-spacing: 0;
   }
+  .texan-logo img { width: min(100%, 220px); }
   .texan-logo b { font-size: 24px; }
   .texan-logo small { font-size: 8px; }
   .texan-mark {

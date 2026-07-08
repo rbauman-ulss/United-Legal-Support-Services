@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Texan Core Solutions | NextUS NextUp Portal',
+  title: 'Texan Core Solutions | TEXANCS Portal',
   description:
-    'Pre-litigation operations support and secure NextUS / NextUp portals for personal injury law firms.',
+    'Pre-litigation operations support and secure firm activity portal for personal injury law firms.',
 };
 
 // Applies the saved (or system) theme before first paint to avoid a flash.
