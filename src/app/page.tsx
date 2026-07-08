@@ -11,14 +11,6 @@ const VALUES = [
   ['Trusted Partner', 'Built for confidential, long-term operational partnership.'],
 ];
 
-const CORE_VALUES = [
-  ['Hard Work', 'We believe in earning trust through effort, dedication, and discipline.'],
-  ['Loyalty', 'We stand by our clients, our team, and our word.'],
-  ['Respect', 'We value people, relationships, and the impact we make.'],
-  ['Accountability', 'We own our responsibilities and deliver on our commitments.'],
-  ['Experienced. Committed. Trusted.', 'Backed by proven professionals who treat your cases with care and attention.'],
-];
-
 export default function MarketingPage() {
   return (
     <main className="texan-site">
@@ -83,17 +75,8 @@ export default function MarketingPage() {
         <img src="/texan-assets/services-strip.png" alt="What we do: pre-litigation and legal operations support services." />
       </section>
 
-      <section className="texan-values-live" aria-label="Texan Core Values">
-        <h2>Texan Core Values</h2>
-        <div className="texan-core-grid">
-          {CORE_VALUES.map(([title, body]) => (
-            <article key={title}>
-              <div className="texan-core-icon" aria-hidden="true" />
-              <h3>{title}</h3>
-              <p>{body}</p>
-            </article>
-          ))}
-        </div>
+      <section className="texan-image-strip texan-values-band" aria-label="Texan Core Values">
+        <img src="/texan-assets/values-strip-clean.png" alt="Texan Core Values: hard work, loyalty, respect, accountability, experienced, committed, trusted." />
       </section>
 
       <section className="texan-image-strip texan-founders" aria-label="Meet your co-founders">
