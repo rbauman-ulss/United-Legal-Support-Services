@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-const DEMO_EMAIL = 'mailto:rbauman@texancs.com?cc=jmaldonado@texancs.com&subject=Texan%20Core%20Solutions%20Demo%20Request';
+const DEMO_EMAIL = 'mailto:rbauman@texancs.com,jmaldonado@texancs.com?subject=Texan%20Core%20Solutions%20Demo%20Request';
 
 const VALUES = [
   ['Texan Values', 'We bring discipline, loyalty, and accountability to every file.'],
