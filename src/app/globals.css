@@ -521,13 +521,14 @@ html.dark .feature { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(
   align-items: center;
   color: #071638;
   flex: 0 0 auto;
+  min-width: 280px;
 }
 .texan-logo:hover { text-decoration: none; }
 .texan-logo img {
   display: block;
-  width: clamp(185px, 18vw, 270px);
+  width: clamp(280px, 24vw, 380px);
   height: auto;
-  max-height: 72px;
+  max-height: 86px;
   object-fit: contain;
 }
 .texan-logo b { display: block; font-family: Georgia, serif; font-size: 30px; line-height: 1; }
@@ -1097,8 +1098,8 @@ html.dark .feature { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(
     gap: 16px;
     padding: 16px 5vw;
   }
-  .texan-logo { align-self: flex-start; justify-content: flex-start; }
-  .texan-logo img { width: min(100%, 250px); max-height: 68px; }
+  .texan-logo { align-self: flex-start; justify-content: flex-start; min-width: 250px; }
+  .texan-logo img { width: min(100%, 310px); max-height: 80px; }
   .texan-links {
     width: 100%;
     justify-content: center;
@@ -1219,7 +1220,8 @@ html.dark .feature { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(
   .texan-logo {
     letter-spacing: 0;
   }
-  .texan-logo img { width: min(100%, 220px); }
+  .texan-logo { min-width: min(100%, 250px); }
+  .texan-logo img { width: min(100%, 250px); }
   .texan-logo b { font-size: 24px; }
   .texan-logo small { font-size: 8px; }
   .texan-mark {
