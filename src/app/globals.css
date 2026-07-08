@@ -490,11 +490,10 @@ html.dark .feature { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(
   min-height: 100vh;
 }
 .texan-topbar {
-  min-height: 36px;
-  display: grid;
-  grid-template-columns: auto auto 1fr auto;
+  min-height: 38px;
+  display: flex;
   align-items: center;
-  gap: 22px;
+  justify-content: center;
   padding: 0 4vw;
   background: #061536;
   color: #fff;
@@ -502,7 +501,6 @@ html.dark .feature { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(
   font-weight: 700;
   text-transform: uppercase;
 }
-.texan-topbar a { color: #fff; }
 .texan-topbar span { text-align: center; letter-spacing: .03em; }
 .texan-nav {
   display: flex;
@@ -590,6 +588,9 @@ html.dark .feature { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(
   justify-content: flex-end;
   position: relative;
   padding: 22px 0 0 28px;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.8), transparent 38%),
+    url('/texan-assets/houston-skyline.png') center bottom / cover fixed;
 }
 .texan-hero-art::before {
   content: "";
@@ -685,13 +686,84 @@ html.dark .feature { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(
   padding: 0;
   border: 0;
 }
+.texan-values-live {
+  position: relative;
+  overflow: hidden;
+  padding: 30px 4vw 34px;
+  background:
+    linear-gradient(90deg, rgba(4, 16, 42, .96) 0%, rgba(6, 21, 54, .9) 58%, rgba(4, 16, 42, .98) 100%),
+    url('/texan-assets/houston-skyline.png') center center / cover fixed;
+  color: #fff;
+}
+.texan-values-live::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(224,164,58,.16), transparent 36%, rgba(0,0,0,.18));
+  pointer-events: none;
+}
+.texan-values-live h2 {
+  position: relative;
+  margin: 0 auto 22px;
+  max-width: 560px;
+  color: #e0a43a;
+  font-family: Georgia, serif;
+  font-size: clamp(23px, 3vw, 34px);
+  text-align: center;
+  text-transform: uppercase;
+}
+.texan-values-live h2::before,
+.texan-values-live h2::after {
+  content: "";
+  display: inline-block;
+  width: min(18vw, 170px);
+  height: 1px;
+  margin: 0 16px 8px;
+  background: #bf7412;
+}
+.texan-core-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  max-width: 1180px;
+  margin: 0 auto;
+}
+.texan-core-grid article {
+  min-height: 150px;
+  padding: 12px 24px;
+  text-align: center;
+  border-right: 1px solid rgba(224, 164, 58, .56);
+}
+.texan-core-grid article:last-child { border-right: 0; }
+.texan-core-icon {
+  width: 44px;
+  height: 44px;
+  margin: 0 auto 10px;
+  border: 2px solid #e0a43a;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 11px rgba(6, 21, 54, .7), inset 0 0 0 13px #e0a43a;
+}
+.texan-core-grid h3 {
+  margin: 0 0 8px;
+  color: #e0a43a;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.texan-core-grid p {
+  margin: 0;
+  color: #fff;
+  font-size: 13px;
+  line-height: 1.45;
+}
 .texan-demo {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 28px;
   padding: 46px 4vw;
-  background: linear-gradient(90deg, #061536 0%, rgba(6,21,54,.9) 55%, rgba(191,116,18,.78) 100%);
+  background:
+    linear-gradient(90deg, #061536 0%, rgba(6,21,54,.92) 46%, rgba(191,116,18,.74) 100%),
+    url('/texan-assets/houston-skyline.png') center center / cover fixed;
   color: #fff;
 }
 .texan-demo p:not(.eyebrow) { max-width: 640px; color: #f8f4ec; }
@@ -992,8 +1064,6 @@ html.dark .feature { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(
   .view-switcher a { flex: 1 1 130px; text-align: center; }
 
   .texan-topbar {
-    grid-template-columns: 1fr;
-    gap: 6px;
     padding: 10px 5vw;
     text-align: center;
     font-size: 11px;
@@ -1033,6 +1103,7 @@ html.dark .feature { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(
     max-height: 390px;
     padding: 0;
     overflow: hidden;
+    background-attachment: scroll;
   }
   .texan-hero-art::before {
     background:
@@ -1075,11 +1146,38 @@ html.dark .feature { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(
     height: 170px;
     object-position: 42% center;
   }
+  .texan-values-live {
+    padding: 34px 5vw 28px;
+    background-attachment: scroll;
+  }
+  .texan-values-live h2::before,
+  .texan-values-live h2::after {
+    width: 18vw;
+    margin-inline: 10px;
+  }
+  .texan-core-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+  }
+  .texan-core-grid article {
+    min-height: 0;
+    border-right: 1px solid rgba(224, 164, 58, .42);
+    border-bottom: 1px solid rgba(224, 164, 58, .32);
+  }
+  .texan-core-grid article:nth-child(2n) { border-right: 0; }
+  .texan-core-grid article:last-child {
+    grid-column: 1 / -1;
+    border-right: 0;
+    border-bottom: 0;
+  }
   .texan-section { padding: 38px 5vw 42px; }
   .texan-demo,
   .texan-footer,
   .connector-card { align-items: stretch; flex-direction: column; }
-  .texan-demo { padding: 36px 5vw; }
+  .texan-demo {
+    padding: 36px 5vw;
+    background-attachment: scroll;
+  }
   .texan-demo-actions,
   .texan-demo-actions .btn { width: 100%; }
   .texan-footer { padding: 22px 5vw; }
@@ -1140,6 +1238,17 @@ html.dark .feature { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(
     height: 160px;
     object-position: 39% center;
   }
+  .texan-values-live h2::before,
+  .texan-values-live h2::after { display: none; }
+  .texan-core-grid { grid-template-columns: 1fr; }
+  .texan-core-grid article,
+  .texan-core-grid article:nth-child(2n),
+  .texan-core-grid article:last-child {
+    grid-column: auto;
+    border-right: 0;
+    border-bottom: 1px solid rgba(224, 164, 58, .32);
+  }
+  .texan-core-grid article:last-child { border-bottom: 0; }
   .texan-footer nav {
     display: grid;
     grid-template-columns: 1fr 1fr;

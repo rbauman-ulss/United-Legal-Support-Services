@@ -19,14 +19,19 @@ const VALUES = [
   ['Trusted Partner', 'Built for confidential, long-term operational partnership.'],
 ];
 
+const CORE_VALUES = [
+  ['Hard Work', 'We believe in earning trust through effort, dedication, and discipline.'],
+  ['Loyalty', 'We stand by our clients, our team, and our word.'],
+  ['Respect', 'We value people, relationships, and the impact we make.'],
+  ['Accountability', 'We own our responsibilities and deliver on our commitments.'],
+  ['Experienced. Committed. Trusted.', 'Backed by proven professionals who treat your cases with care and attention.'],
+];
+
 export default function MarketingPage() {
   return (
     <main className="texan-site">
       <div className="texan-topbar">
-        <a href="tel:+15125649925">(512) 564-9925</a>
-        <a href="mailto:rbauman@texancs.com">rbauman@texancs.com</a>
         <span>Proudly serving personal injury law firms nationwide</span>
-        <Link href="/login">Client Login</Link>
       </div>
 
       <nav className="texan-nav" aria-label="Primary navigation">
@@ -64,7 +69,7 @@ export default function MarketingPage() {
           </div>
         </div>
         <div className="texan-hero-art" aria-label="Nationwide Texan Core Solutions support">
-          <img className="texan-hero-map-img" src="/texan-assets/hero-us-map-enhanced.png" alt="United States support map with Texan Core Solutions mark" />
+          <img className="texan-hero-map-img" src="/texan-assets/hero-us-map-houston.png" alt="United States support map with Texan Core Solutions mark over Houston skyline" />
         </div>
       </section>
 
@@ -96,8 +101,17 @@ export default function MarketingPage() {
         </div>
       </section>
 
-      <section className="texan-image-strip texan-values-band" aria-label="Texan Core Values">
-        <img src="/texan-assets/values-strip.png" alt="Texan Core Values: hard work, loyalty, respect, accountability, experienced, committed, trusted." />
+      <section className="texan-values-live" aria-label="Texan Core Values">
+        <h2>Texan Core Values</h2>
+        <div className="texan-core-grid">
+          {CORE_VALUES.map(([title, body]) => (
+            <article key={title}>
+              <div className="texan-core-icon" aria-hidden="true" />
+              <h3>{title}</h3>
+              <p>{body}</p>
+            </article>
+          ))}
+        </div>
       </section>
 
       <section className="texan-image-strip texan-founders" aria-label="Meet your co-founders">
@@ -107,15 +121,15 @@ export default function MarketingPage() {
       <section className="texan-demo" id="demo">
         <div>
           <p className="eyebrow">Schedule a Demo</p>
-          <h2>Show your firm how NextUp supports the Texan workflow</h2>
+          <h2>Walk firms through real-time case activity</h2>
           <p>
-            Use the secure demo portal to walk law firms through case pipelines, file health, reports,
-            billing, and client-facing visibility.
+            Use this secure activity view during demos and client check-ins to show case pipelines,
+            file health, reports, billing status, and operational progress.
           </p>
         </div>
         <div className="texan-demo-actions">
-          <Link className="btn" href="/login">Open Demo Portal</Link>
-          <a className="btn secondary" href="mailto:rbauman@texancs.com?subject=Texan%20Core%20Solutions%20Demo%20Request">
+          <Link className="btn" href="/login">Open Activity Walkthrough</Link>
+          <a className="btn secondary" href="mailto:rbauman@texancs.com,jmaldonado@texancs.com?subject=Texan%20Core%20Solutions%20Demo%20Request">
             Email Demo Request
           </a>
         </div>
