@@ -936,16 +936,218 @@ html.dark .feature { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(
 }
 
 @media (max-width: 900px) {
-  .texan-topbar { grid-template-columns: 1fr; gap: 6px; padding: 10px 5vw; text-align: center; }
-  .texan-nav { position: static; align-items: flex-start; flex-direction: column; }
-  .texan-links { gap: 12px; flex-wrap: wrap; }
-  .texan-hero { grid-template-columns: 1fr; }
-  .texan-hero-copy { padding: 42px 5vw 28px; }
-  .texan-hero-art { max-height: 360px; padding: 0; }
-  .texan-hero-map-img { width: 100%; transform: none; }
-  .texan-image-strip img { min-width: 900px; transform: translateX(-22%); }
+  .shell { display: block; }
+  .sidebar {
+    position: static;
+    width: 100%;
+    min-height: auto;
+    max-height: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 4vw;
+    overflow: visible;
+  }
+  .portal-brand {
+    width: 100%;
+    padding: 0 0 12px;
+  }
+  .portal-mark {
+    width: 38px;
+    height: 38px;
+    flex-basis: 38px;
+    font-size: 14px;
+  }
+  .portal-brand b { font-size: 17px; }
+  .portal-brand small { font-size: 8px; }
+  .sidebar .section {
+    width: 100%;
+    margin: 8px 0 0;
+    padding: 8px 0 0;
+  }
+  .sidebar a {
+    margin: 0;
+    padding: 8px 10px;
+    border: 1px solid rgba(224, 164, 58, 0.16);
+    white-space: nowrap;
+  }
+  .sidebar-credit {
+    width: 100%;
+    margin-top: 4px;
+    padding: 10px 0 0;
+  }
+  .main { min-width: 0; }
+  .topbar {
+    position: static;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px 4vw;
+  }
+  .topbar .actions { width: 100%; justify-content: space-between; }
+  .content { padding: 18px 4vw 34px; }
+  .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .view-switcher { width: 100%; }
+  .view-switcher a { flex: 1 1 130px; text-align: center; }
+
+  .texan-topbar {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    padding: 10px 5vw;
+    text-align: center;
+    font-size: 11px;
+  }
+  .texan-nav {
+    position: static;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 5vw;
+  }
+  .texan-logo { align-self: stretch; justify-content: center; }
+  .texan-links {
+    width: 100%;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .texan-links a {
+    padding: 8px 10px;
+    border: 1px solid rgba(7, 22, 56, .12);
+    border-radius: 4px;
+  }
+  .texan-hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    background: #fff;
+  }
+  .texan-hero-copy {
+    max-width: none;
+    padding: 38px 5vw 24px;
+  }
+  .texan-hero p { max-width: none; }
+  .texan-cta-row .btn { flex: 1 1 210px; text-align: center; }
+  .texan-hero-art {
+    min-height: 260px;
+    max-height: 390px;
+    padding: 0;
+    overflow: hidden;
+  }
+  .texan-hero-art::before {
+    background:
+      linear-gradient(180deg, rgba(255,255,255,.96) 0%, rgba(255,255,255,.2) 28%, transparent 48%),
+      linear-gradient(90deg, rgba(255,255,255,.82) 0%, transparent 32%);
+  }
+  .texan-hero-map-img {
+    width: 100%;
+    min-height: 260px;
+    transform: none;
+    object-position: center top;
+  }
+  .texan-icon-strip,
+  .texan-service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .texan-icon-strip { padding: 16px 5vw; }
+  .texan-icon-strip article,
+  .texan-service-grid article {
+    padding: 14px 10px;
+  }
+  .texan-image-strip {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+  .texan-image-strip img {
+    width: auto;
+    max-width: none;
+    min-width: 920px;
+    height: 160px;
+    object-fit: cover;
+    transform: none;
+  }
+  .texan-stats-image img { object-position: 43% center; }
+  .texan-values-band img { object-position: 42% center; }
+  .texan-founders img {
+    min-width: 980px;
+    height: 170px;
+    object-position: 42% center;
+  }
+  .texan-section { padding: 38px 5vw 42px; }
   .texan-demo,
   .texan-footer,
-  .connector-card { align-items: flex-start; flex-direction: column; }
+  .connector-card { align-items: stretch; flex-direction: column; }
+  .texan-demo { padding: 36px 5vw; }
+  .texan-demo-actions,
+  .texan-demo-actions .btn { width: 100%; }
+  .texan-footer { padding: 22px 5vw; }
   .pie-card { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 520px) {
+  .texan-topbar span { line-height: 1.35; }
+  .texan-logo {
+    gap: 10px;
+    letter-spacing: .12em;
+  }
+  .texan-logo b { font-size: 24px; }
+  .texan-logo small { font-size: 8px; }
+  .texan-mark {
+    width: 44px;
+    height: 44px;
+    font-size: 16px;
+  }
+  .texan-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .texan-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    text-align: center;
+  }
+  .texan-hero h1 { font-size: clamp(34px, 12vw, 48px); }
+  .texan-hero h2 { font-size: 18px; }
+  .texan-hero p { font-size: 15px; }
+  .texan-hero-art { min-height: 230px; }
+  .texan-hero-map-img {
+    min-height: 230px;
+    object-position: 56% top;
+  }
+  .texan-icon-strip,
+  .texan-service-grid {
+    grid-template-columns: 1fr;
+  }
+  .texan-icon-strip article,
+  .texan-service-grid article {
+    border-right: 0;
+    border-bottom: 1px solid #e5ded2;
+  }
+  .texan-icon-strip article:last-child,
+  .texan-service-grid article:last-child { border-bottom: 0; }
+  .texan-image-strip img {
+    min-width: 820px;
+    height: 150px;
+  }
+  .texan-stats-image img { object-position: 45% center; }
+  .texan-values-band img { object-position: 38% center; }
+  .texan-founders img {
+    min-width: 900px;
+    height: 160px;
+    object-position: 39% center;
+  }
+  .texan-footer nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    gap: 10px;
+  }
+  .btn { width: 100%; justify-content: center; text-align: center; }
+  .card, .card.tight { padding: 16px; }
+  .stat { padding: 14px; }
+  .grid-4 { grid-template-columns: 1fr; }
 }
