@@ -1,3 +1,7 @@
+> [!WARNING]
+> **This repository has moved to [github.com/iTechSmartINC/Texan](https://github.com/iTechSmartINC/Texan)** as part of the iTechSmart Inc rebrand.
+> Please update your links and git remotes. This copy is kept as a redirect and is no longer updated.
+
 # NextUS CSM — Multi-Tenant Case Management for Injury Law Firms
 
 NextUS CSM replaces the **TCS Nexus OMS spreadsheet** (multi-tab Excel workbook) with a
